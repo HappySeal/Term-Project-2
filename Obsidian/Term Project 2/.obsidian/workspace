@@ -4,12 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "a8feb2fc1eecf428",
+        "id": "f4cd0439391f5a93",
         "type": "leaf",
         "state": {
-          "type": "pdf-annotator",
+          "type": "markdown",
           "state": {
-            "file": "Notes/Pdf'i bastan asagiya okuyacagiz.md"
+            "file": "Main.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Pdf'i bastan asagiya okuyacagiz.md",
+                "file": "Main.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a8feb2fc1eecf428",
+  "active": "f4cd0439391f5a93",
   "lastOpenFiles": [
-    "Notes/Pdf'i bastan asagiya okuyacagiz.md",
-    "TODO/Kanban.md",
-    "Attachments/TP2.pdf",
-    "TODO.md",
-    "Templates/Note Template.md",
-    "Notes/Add new features.md",
+    "Main.md",
+    "Kanban.md",
+    "Notes/PDF.md",
     "Notes/Bruh.md",
+    "Notes/Add new features.md",
     "Notes/Something In the waie.md",
-    "Untitled.md",
-    "Notes/Main.md"
+    "Attachments/TP2.pdf",
+    "Notes/Pdf'i bastan asagiya okuyacagiz.md",
+    "TODO.md",
+    "Templates/Note Template.md"
   ]
 }

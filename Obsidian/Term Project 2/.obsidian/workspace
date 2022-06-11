@@ -7,11 +7,19 @@
         "id": "f4cd0439391f5a93",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "kanban",
           "state": {
-            "file": "Main.md",
-            "mode": "source",
-            "source": false
+            "file": "Kanban.md"
+          }
+        }
+      },
+      {
+        "id": "94f6e8dc70a5bb0c",
+        "type": "leaf",
+        "state": {
+          "type": "pdf-annotator",
+          "state": {
+            "file": "Notes/PDF.md"
           }
         }
       }
@@ -69,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Main.md",
+                "file": "Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,8 +97,8 @@
   },
   "active": "f4cd0439391f5a93",
   "lastOpenFiles": [
-    "Main.md",
     "Kanban.md",
+    "Main.md",
     "Notes/PDF.md",
     "Notes/Bruh.md",
     "Notes/Add new features.md",

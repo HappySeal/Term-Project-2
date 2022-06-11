@@ -16,24 +16,30 @@ classdef Interval < handle
         function w = getWidth(self)
         % Return the width of the Interval
             %%%% %MISSION Write your code below %%%%
+            w = self.rt - self.lt;
             
         end
         
         function scale(self, f)
         % Scale self by a factor f
             %%%% %MISSION Write your code below %%%%
+            w = self.rt - self.lt;
+            self.rt = self.lt + w * f;
                     
         end
         
         function shift(self, s)
         % Shift self by constant s
             %%%% %MISSION Write your code below %%%%
+            self.lt = self.lt + s;
+            self.rt = self.rt + s;
             
         end
         
         function tf = isIn(self, other)
         % tf is true (1) if self is in the other Interval
             %%%% %MISSION Write your code below %%%%
+            tf = self.lt <= other.lt && self.rt >= other.rt;
         
         end
         
@@ -41,6 +47,8 @@ classdef Interval < handle
         % Inter is the new Interval formed by adding self and the 
         % the other Interval
             %%%% %MISSION Write your code below %%%%
+            Inter.lt = min(self.lt,other.lt);
+            Inter.rt = max(self.rt,other.rt);
             
         end
         

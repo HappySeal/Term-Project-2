@@ -12,11 +12,13 @@ kanban-plugin: basic
 
 ## Todo
 
-- [ ] ## PDF'i okuyacagiz<br><br>Icinde onemli buldugumuz seyleri annotate edebiliriz<br><br>![[PDF]]
+- [ ] ## Eksiklikler icin feedback iste<br><br>- Surgery Room sayisi kac?<br>- Class'lar ne ise yariyor?<br>- Nerede kullanmamiz lazim? <br>- Kendi classlarimizi tanmilayabiliyor muyuz?
 
 
 ## In Progress
 
+- [ ] ## PDF'i okuyacagiz<br><br>Icinde onemli buldugumuz seyleri annotate edebiliriz<br><br>![[PDF]]
+- [ ] ## Class'larin eksik methodlarini tamamla<br>Ozellikle Schedule class'inda ne yapamiz gerektigi hic acik degil. Eger ki bizim yazmamiz isteniyor ise class tanimlanmasi sacma :(
 
 
 ## Quick Fix / Bugs

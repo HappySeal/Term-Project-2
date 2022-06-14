@@ -4,9 +4,9 @@
 In this project we are going to have lots of fun with my darling ZBS, and this is the start of the journey ❤
 
 ---
-
-# [[Kanban]]
-# [[TP2.pdf|PDF]]
+# Important Files
+## [[Kanban]]
+## [[TP2.pdf|PDF]]
 
 ---
 
@@ -14,12 +14,14 @@ In this project we are going to have lots of fun with my darling ZBS, and this i
 ```ad-abstract
 title: Properties
 
-- Certain number of surgery rooms, one surgery per room ( Number is given)
+- One Operation per Surgery Room (\#ofRooms = 3)
 - Enough doctors for any schedule
 - Interval = \[9:00 - 17:00] = \[0,480] (in minutes)
-- Priority = {1,2,3,4}, 1st: Hightest => 4th: Lowest
+- Priority = {1,2,3,4}, 1st: Hightest => 4th: Lowest ; 0th => EMERGENCY
 
 ```
+
+
 ![[Pasted image 20220611162432.png]]
 ```ad-example
 title: Intervals
@@ -38,5 +40,6 @@ title: Postponing
 - If a surgery cant be scheduled on that day, it can be postponed to the next day with priority 0;
 - This number only valid for postponed surgeries
 - Start time of surgery will be equal to **9:00**
-- 
+- This can be only done **once**
 ```
+

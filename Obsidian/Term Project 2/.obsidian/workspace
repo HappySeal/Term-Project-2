@@ -7,9 +7,9 @@
         "id": "f4cd0439391f5a93",
         "type": "leaf",
         "state": {
-          "type": "kanban",
+          "type": "pdf",
           "state": {
-            "file": "Kanban.md"
+            "file": "Attachments/TP2.pdf"
           }
         }
       },
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kanban.md",
+                "file": "Attachments/TP2.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,15 +97,15 @@
   },
   "active": "f4cd0439391f5a93",
   "lastOpenFiles": [
-    "Kanban.md",
+    "Attachments/TP2.pdf",
     "Main.md",
+    "Templates/Note Template.md",
+    "Kanban.md",
     "Notes/PDF.md",
     "Notes/Bruh.md",
     "Notes/Add new features.md",
     "Notes/Something In the waie.md",
-    "Attachments/TP2.pdf",
     "Notes/Pdf'i bastan asagiya okuyacagiz.md",
-    "TODO.md",
-    "Templates/Note Template.md"
+    "TODO.md"
   ]
 }

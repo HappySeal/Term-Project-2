@@ -27,7 +27,6 @@ classdef Patient < handle
         function setPatientDay(self,d)
             self.day = d;
         end
-
         
     end
 end

@@ -12,7 +12,7 @@ kanban-plugin: basic
 
 ## Todo
 
-- [ ] ## Eksiklikler icin feedback iste<br><br>- Surgery Room sayisi kac?<br>- Class'lar ne ise yariyor?<br>- Nerede kullanmamiz lazim? <br>- Kendi classlarimizi tanmilayabiliyor muyuz?
+- [ ] ## Eksiklikler icin feedback iste<br><br>- Surgery Room sayisi kac?<br>Surgery Room = 3<br> <br>- Class'lar ne ise yariyor?<br><br> <br>- Nerede kullanmamiz lazim? <br><br> <br>- Kendi classlarimizi tanmilayabiliyor muyuz?<br><br>
 
 
 ## In Progress

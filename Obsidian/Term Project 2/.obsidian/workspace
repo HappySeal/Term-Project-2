@@ -7,19 +7,21 @@
         "id": "f4cd0439391f5a93",
         "type": "leaf",
         "state": {
-          "type": "pdf",
+          "type": "markdown",
           "state": {
-            "file": "Attachments/TP2.pdf"
+            "file": "Main.md",
+            "mode": "source",
+            "source": false
           }
         }
       },
       {
-        "id": "94f6e8dc70a5bb0c",
+        "id": "2992eb15a34aabca",
         "type": "leaf",
         "state": {
-          "type": "pdf-annotator",
+          "type": "pdf",
           "state": {
-            "file": "Notes/PDF.md"
+            "file": "Attachments/TP2.pdf"
           }
         }
       }
@@ -95,13 +97,13 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f4cd0439391f5a93",
+  "active": "2992eb15a34aabca",
   "lastOpenFiles": [
     "Attachments/TP2.pdf",
     "Main.md",
+    "Notes/PDF.md",
     "Templates/Note Template.md",
     "Kanban.md",
-    "Notes/PDF.md",
     "Notes/Bruh.md",
     "Notes/Add new features.md",
     "Notes/Something In the waie.md",

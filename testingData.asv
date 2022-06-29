@@ -1,0 +1,39 @@
+clear
+clc
+
+numericData = readmatrix("InputData.xlsx");
+numericData = numericData(:,1:8 ~= 2 & 1:8 ~=3);
+nameSurnameData = readmatrix("InputData.xlsx","Range","B:C","OutputType","string");
+nameSurnameData = nameSurnameData(2:98,:);
+
+scheduledPtr = [];
+scheduleMatrix = zeros([5,480]);
+
+
+for day = 1:5
+   for time = 0:480
+
+%  Testing on probability       
+%             scheduleMatrix(day,time+1) = sum(numericData(:,2) == day &...
+%                 numericData(:,4) <= time &...
+%                 time<= numericData(:,5) - numericData(:,3)...
+%                 );
+
+
+        [n,m] = min(find(...
+                    numericData(:,2) == day &...
+                    numericData(:,4) <= time &...
+                    time<= numericData(:,5) - numericData(:,3)...
+                    ,6));
+        fprintf("[%d,%d]\n",n,m);
+
+   end
+end
+
+% a = cap(scheduleMatrix,3);
+
+
+
+function c = cap(x,y)
+    c = min(x,y);
+end

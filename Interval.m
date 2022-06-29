@@ -2,15 +2,15 @@ classdef Interval < handle
 % An Interval has a left endpoint and a right endpoint.
     
     properties
-       left
-       right
+       lt
+       rt
     end
     
     methods
         function Inter = Interval(lt, rt)
         % Constructor:  construct an Interval object
-            Inter.left= lt;
-            Inter.right= rt;
+            Inter.lt= lt;
+            Inter.rt= rt;
         end
         
         function w = getWidth(self)
@@ -58,7 +58,16 @@ classdef Interval < handle
             if isempty(self)
                 fprintf('Empty %s\n', class(self))
             else
-                fprintf('(%f,%f)\n', self.left, self.right)
+                fprintf('(%f,%f)\n', self.lt, self.rt)
+            end
+        end
+
+        function inter = overlap(self,other)
+            inter= Interval.empty();
+            left= max(self.lt, other.lt);
+            right= min(self.rt, other.rt);
+            if right-left > 0
+                inter= Interval(left, right);
             end
         end
         

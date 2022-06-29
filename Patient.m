@@ -3,15 +3,19 @@ classdef Patient < handle
         name
         surname
         priority
+        avalibleInterval %avalible hours of the patient
         day
+        duration %duration of the patient's operation
     end
 
     methods
-        function self = Patient(n,s,d,p)
+        function self = Patient(n,s,d,p,I,dur)
             self.name = n;
             self.surname = s;
             self.priority = p;
             self.day = d;
+            self.avalibleInterval = I;
+            self.duration = dur;
         end
 
         function p = getPatientPriority(self)

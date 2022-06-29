@@ -14,11 +14,6 @@ classdef Operation < handle
         end
 
         function setAvailableInterval(self,interval)
-        %setAvailableInterval - Description
-        %
-        % Syntax: setAvailableInterval(input)
-        %
-        % Long description
             self.availableInterval = interval;
         end
     end

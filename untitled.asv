@@ -1,0 +1,26 @@
+clear
+clc
+
+
+numericData = readmatrix("InputData.xlsx","Range",[2 4]);
+nameSurnameData = readmatrix("InputData.xlsx","Range","B:C","OutputType","string");
+nameSurnameData = nameSurnameData(2:98,:);
+
+scheduleMatrix = zeros([3,480]);
+day = 1;
+time = 0;
+scheduledPtr = [];
+
+for i = 1:3
+    time = 0;
+    while time < 480
+        unscheduled = numericData(find(prod(1:length(numericData) ~= scheduledPtr(:),1)),:);
+        ptr = find(unscheduled(:,1) == day & unscheduled(:,3) <= time & (time <= unscheduled(:,4) - unscheduled(:,2)));
+        [val,n] = min(numericData(ptr,5));
+        next = ptr(n);
+        scheduleMatrix(i,time+1:time+numericData(next,2)) = ptr(n);
+        scheduledPtr = [scheduledPtr ptr(n)];
+        time = time + numericData(next,2);
+    end
+end
+

@@ -7,10 +7,11 @@ classdef Patient < handle
     end
 
     methods
-        function self = Patient(n,s,p)
+        function self = Patient(n,s,p,d)
             self.name = n;
             self.surname = s;
             self.priority = p;
+            self.day = d;
         end
 
         function p = getPatientPriority(self)

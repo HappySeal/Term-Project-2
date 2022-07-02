@@ -1,3 +1,5 @@
+%Cafer Selli 2444974
+%Zeynep Beril Sahin 2587848
 classdef Schedule < handle
     properties
         dailyPlanningHorizon

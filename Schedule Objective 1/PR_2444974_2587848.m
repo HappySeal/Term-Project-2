@@ -1,7 +1,9 @@
-clear
+%Cafer Selli 2444974
+%Zeynep Beril Sahin 2587848
+clear classes
+clear all
 clc
 close all
-
 
 numericData = readmatrix("InputData.xlsx");
 numericData = numericData(:,1:8 ~= 2 & 1:8 ~=3);

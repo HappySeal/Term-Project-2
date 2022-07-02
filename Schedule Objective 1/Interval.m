@@ -1,3 +1,5 @@
+%Cafer Selli 2444974
+%Zeynep Beril Sahin 2587848
 classdef Interval < handle
 % An Interval has a left endpoint and a right endpoint.
     

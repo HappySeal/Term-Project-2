@@ -10,7 +10,7 @@ nameSurnameData = readmatrix("InputData.xlsx","Range","B:C","OutputType","string
 nameSurnameData = nameSurnameData(2:n+1,:);
 
 s = Schedule(3,5,Interval(0,480));
-s.penaltyMultiplier = 1;
-
-s.constructSchedule(numericData,nameSurnameData,true);
+s.penaltyMultiplier = 7;
+    
+s.constructSchedule(numericData,nameSurnameData);
 s.printSchedule();

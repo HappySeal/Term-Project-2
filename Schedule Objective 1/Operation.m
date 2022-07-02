@@ -6,6 +6,7 @@ classdef Operation < handle
         scheduledInterval
         duration
         operationDay
+        room
     end
 
     methods

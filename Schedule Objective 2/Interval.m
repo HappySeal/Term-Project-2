@@ -39,8 +39,12 @@ classdef Interval < handle
         function tf = isIn(self, other)
         % tf is true (1) if self is in the other Interval
             %%%% %MISSION Write your code below %%%%
-            tf = self.lt <= other.lt && self.rt >= other.rt;
+            tf = self.lt >= other.lt && self.rt <= other.rt;
         
+        end
+
+        function tf = isIncludes(self,other)
+            tf = self.lt <= other.lt && self.rt >= other.rt;
         end
         
         function Inter = add(self, other)
@@ -58,7 +62,7 @@ classdef Interval < handle
             if isempty(self)
                 fprintf('Empty %s\n', class(self))
             else
-                fprintf('(%f,%f)\n', self.lt, self.rt)
+                fprintf('(%d,%d)\n', self.lt, self.rt)
             end
         end
 

@@ -6,6 +6,8 @@ classdef Operation < handle
         scheduledInterval
         duration
         operationDay
+        penalty
+        room
     end
 
     methods
@@ -15,6 +17,10 @@ classdef Operation < handle
 
         function setAvailableInterval(self,interval)
             self.availableInterval = interval;
+        end
+
+        function updatePenalty(self,penaltyMultiplier,time)
+            self.penalty = (penaltyMultiplier).^(4-self.patient.priority) + time - self.availableInterval.lt;
         end
     end
     

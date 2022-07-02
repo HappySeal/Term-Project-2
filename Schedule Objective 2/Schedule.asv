@@ -151,7 +151,7 @@ classdef Schedule < handle
 
             for day = 1:self.planningDays
                 subplot(self.planningDays,1,day);
-                title(sprintf("Day : %d",day));
+                title(sprintf(""))
                 for room = 1:self.numberOfRooms
                     ptr = [double.empty];
                     for j = 1:length(self.finalSchedule)

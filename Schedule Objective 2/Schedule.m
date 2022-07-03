@@ -12,6 +12,8 @@ classdef Schedule < handle
 
         patients
         operations
+
+        shifted
     end
 
     methods
@@ -21,7 +23,7 @@ classdef Schedule < handle
             self.planningDays = days;
             self.numberOfRooms = rooms;
             self.scheduleMatrix = zeros([rooms,horizon.getWidth(),days]);
-
+            self.shifted = zeros([1,5]);
         end
 
 
@@ -76,6 +78,9 @@ classdef Schedule < handle
                             self.operations(maxPenaltyIndex).scheduledInterval = Interval(time,time+self.operations(maxPenaltyIndex).duration);
                             self.operations(maxPenaltyIndex).room = room;
                             self.operations(maxPenaltyIndex).operationDay = day;
+                            if time ~= self.operations(maxPenaltyIndex).availableInterval.lt
+                                self.shifted(self.patients(maxPenaltyIndex).priority+1) = self.shifted(self.patients(maxPenaltyIndex).priority+1) + 1;
+                            end
 
                             unscheduledPtr = unscheduledPtr(unscheduledPtr ~= maxPenaltyIndex);
                             self.finalSchedule = [ self.finalSchedule self.operations(maxPenaltyIndex)];
@@ -147,14 +152,19 @@ classdef Schedule < handle
             writetable(t,filename,'Sheet',1,'Range','A1','WriteVariableNames',true);
             disp(t);
 
+
             avgUsage = zeros([self.numberOfRooms,self.planningDays]);
             for i = 1:self.numberOfRooms
                 for j = 1:self.planningDays
                     avgUsage(i,j) = mean(self.scheduleMatrix(i,:,j) ~= 0);
                 end
             end
-            avgUsage(:,self.planningDays+1) = mean(avgUsage,1);
+            avgUsage(:,self.planningDays+1) = mean(avgUsage,2);
+            avgUsage(self.numberOfRooms+1,:) = mean(avgUsage,1);
+            fprintf("Utilization of the rooms\n");
             disp(avgUsage);
+            fprintf("\nShifted by Priority");
+            disp(self.shifted);
             self.drawGanttChart();
         end
 

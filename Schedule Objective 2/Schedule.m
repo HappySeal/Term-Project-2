@@ -146,6 +146,15 @@ classdef Schedule < handle
             t = table(Room_No,Available_Interval,Duration,Sched_Interval,Patient_Name,Patient_Surname,Patient_Priority,Operation_Day);
             writetable(t,filename,'Sheet',1,'Range','A1','WriteVariableNames',true);
             disp(t);
+
+            avgUsage = zeros([self.numberOfRooms,self.planningDays]);
+            for i = 1:self.numberOfRooms
+                for j = 1:self.planningDays
+                    avgUsage(i,j) = mean(self.scheduleMatrix(i,:,j) ~= 0);
+                end
+            end
+            avgUsage(:,self.planningDays+1) = mean(avgUsage,1);
+            disp(avgUsage);
             self.drawGanttChart();
         end
 

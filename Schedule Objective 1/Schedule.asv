@@ -122,7 +122,7 @@ classdef Schedule < handle
                             self.operations(index).scheduledInterval = Interval(minCollisionTime,minCollisionTime+self.operations(index).duration);
                             self.operations(index).room = minCollisionRoom;
                             if minCollisionTime ~= self.operations(index).availableInterval.lt
-                                self.shifted(self.patients(index).priority+1) = self.shifted(self.patients(index).priority+1) + 1;
+                                shif
                             end
                             self.finalSchedule = [ self.finalSchedule self.operations(index)];
                             unscheduled = 0;
@@ -205,8 +205,6 @@ classdef Schedule < handle
             fprintf("Utilization of the rooms\n");
             disp(avgUsage);
             fprintf("Objective Function Value: %d", sum(Patient_Priority ~= 0));
-            fprintf("\nShifted by Priority");
-            disp(self.shifted);
             self.drawGanttChart();
         end
 
